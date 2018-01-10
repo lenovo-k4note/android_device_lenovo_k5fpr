@@ -112,3 +112,6 @@ BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
 # Block based ota
 # see http://review.cyanogenmod.org/#/c/78849/1/core/Makefile
 BLOCK_BASED_OTA := false
+
+# SensorHAL
+TARGET_SENSORS_DEVICE_API_VERSION := SENSORS_DEVICE_API_VERSION_1_1
