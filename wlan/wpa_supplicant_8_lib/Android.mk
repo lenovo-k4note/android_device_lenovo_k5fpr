@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The Android Open Source Project
+# Copyright (C) 2008 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,9 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+###################################################################################
+##### This Makefile include Google pure SUPPLICANT and MTK Turnkey SUPPLICANT #####
+###################################################################################
 LOCAL_PATH := $(call my-dir)
-$(warning Build wpa_supplicant_lib...)
+
+##### For Google SUPPLICANT #####
+    $(warning build BASIC wpa_supplicant)
     WPA_SUPPL_DIR = external/wpa_supplicant_8
     WPA_SRC_FILE :=
 
@@ -40,6 +44,11 @@ ifdef CONFIG_DRIVER_NL80211
 WPA_SUPPL_DIR_INCLUDE += external/libnl/include
 WPA_SRC_FILE += mediatek_driver_cmd_nl80211.c
 endif
+
+ifdef CONFIG_DRIVER_WEXT
+#error doesn't support CONFIG_DRIVER_WEXT
+endif
+
 # To force sizeof(enum) = 4
 ifeq ($(TARGET_ARCH),arm)
 L_CFLAGS += -mabi=aapcs-linux
