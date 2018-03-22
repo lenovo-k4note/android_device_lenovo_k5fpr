@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008 The Android Open Source Project
+ * Copyright (C) 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,3 +14,18 @@
  * limitations under the License.
  */
 
+#define LOG_TAG "android.hardware.sensors@1.0-service"
+
+#include <android/hardware/sensors/1.0/ISensors.h>
+#include <hidl/LegacySupport.h>
+
+using android::hardware::sensors::V1_0::ISensors;
+using android::hardware::defaultPassthroughServiceImplementation;
+
+int main() {
+    /* Sensors framework service needs at least two threads.
+     * One thread blocks on a "poll"
+     * The second thread is needed for all other HAL methods.
+     */
+    return defaultPassthroughServiceImplementation<ISensors>(2);
+}
