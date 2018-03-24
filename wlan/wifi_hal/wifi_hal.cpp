@@ -131,12 +131,12 @@ wifi_error init_wifi_vendor_hal_func_table(wifi_hal_fn *fn)
     /*fn->wifi_get_firmware_memory_dump = wifi_get_firmware_memory_dump;
     fn->wifi_set_log_handler = wifi_set_log_handler;
     fn->wifi_reset_log_handler = wifi_reset_log_handler;
-    fn->wifi_set_alert_handler = wifi_set_alert_handler;
+    fn->wifi_set_alert_handler = wifi_set_alert_handler; */
     fn->wifi_get_firmware_version = wifi_get_firmware_version;
-    fn->wifi_get_ring_buffers_status = wifi_get_ring_buffers_status;
+    /*fn->wifi_get_ring_buffers_status = wifi_get_ring_buffers_status;
     fn->wifi_get_logger_supported_feature_set = wifi_get_logger_supported_feature_set;
-    fn->wifi_get_ring_data = wifi_get_ring_data;
-    fn->wifi_get_driver_version = wifi_get_driver_version;*/
+    fn->wifi_get_ring_data = wifi_get_ring_data;*/
+    fn->wifi_get_driver_version = wifi_get_driver_version;
     fn->wifi_start_rssi_monitoring = wifi_start_rssi_monitoring;
     fn->wifi_stop_rssi_monitoring = wifi_stop_rssi_monitoring;
     fn->wifi_start_sending_offloaded_packet = wifi_start_sending_offloaded_packet;
@@ -1174,6 +1174,36 @@ static wifi_error wifi_stop_rssi_monitoring(wifi_request_id id, wifi_interface_h
     }
 
     return wifi_cancel_cmd(id, iface);
+}
+
+//TODO get from the kernel
+wifi_error wifi_get_driver_version(wifi_interface_handle iface, char *buffer, int buffer_size)
+{
+    if (buffer && (buffer_size > 0)) {
+	strcpy(buffer, "APEX.WCN.MT6620.JB2.MP.V1.0");
+	return WIFI_SUCCESS;
+    } else {
+        ALOGE("Driver version buffer NULL");
+        return  WIFI_ERROR_INVALID_ARGS;
+    }
+}
+
+/* API to collect a firmware version string */
+wifi_error wifi_get_firmware_version(wifi_interface_handle iface, char *buffer,
+        int buffer_size)
+{
+    if (buffer && (buffer_size > 0)) {
+	strcpy(buffer, "20151224161631a"); //Patch version
+	return WIFI_SUCCESS;
+/*	DebugCommand *cmd = new DebugCommand(iface, buffer, &buffer_size, GET_FW_VER);
+        NULL_CHECK_RETURN(cmd, "memory allocation failure", WIFI_ERROR_OUT_OF_MEMORY);
+        wifi_error result = (wifi_error)cmd->start();
+        cmd->releaseRef();
+        return result;*/
+    } else {
+        ALOGE("FW version buffer NULL");
+        return  WIFI_ERROR_INVALID_ARGS;
+    }
 }
 
 /////////////////////////////////////////////////////////////////////////////

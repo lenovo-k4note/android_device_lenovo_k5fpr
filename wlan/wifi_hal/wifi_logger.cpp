@@ -365,31 +365,6 @@ public:
     }
 };
 
-/* API to collect a firmware version string */
-wifi_error wifi_get_firmware_version(wifi_interface_handle iface, char *buffer,
-        int buffer_size)
-{
-    if (buffer && (buffer_size > 0)) {
-        DebugCommand *cmd = new DebugCommand(iface, buffer, &buffer_size, GET_FW_VER);
-        return (wifi_error)cmd->start();
-    } else {
-        ALOGE("FW version buffer NULL");
-        return  WIFI_ERROR_INVALID_ARGS;
-    }
-}
-
-/* API to collect a driver version string */
-wifi_error wifi_get_driver_version(wifi_interface_handle iface, char *buffer, int buffer_size)
-{
-    if (buffer && (buffer_size > 0)) {
-        DebugCommand *cmd = new DebugCommand(iface, buffer, &buffer_size, GET_DRV_VER);
-        return (wifi_error)cmd->start();
-    } else {
-        ALOGE("Driver version buffer NULL");
-        return  WIFI_ERROR_INVALID_ARGS;
-    }
-}
-
 /* API to collect driver records */
 wifi_error wifi_get_ring_data(wifi_interface_handle iface, char *ring_name)
 {
