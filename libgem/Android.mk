@@ -57,7 +57,8 @@ LOCAL_C_INCLUDES := \
 	external/libpng \
 	external/zlib \
 	external/skia/src/images \
-	external/skia/include/core
+	external/skia/include/core \
+	external/skia/include/config
 
 LOCAL_SHARED_LIBRARIES := \
 	libutils \
