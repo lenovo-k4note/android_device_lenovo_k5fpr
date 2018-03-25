@@ -52,6 +52,13 @@
 # Trusty driver
 /dev/trusty-ipc-dev0      0660   system     keystore
 
+# Gyroscope
+/sys/class/misc/m_gyro_misc	gyroenablenodata 0660   system	    system
+/sys/class/misc/m_gyro_misc	gyroactive 	0660   system	    system
+/sys/class/misc/m_gyro_misc	gyrodelay 	0660   system	    system
+/sys/class/misc/m_gyro_misc	gyrobatch 	0660   system	    system
+/sys/class/misc/m_gyro_misc	gyroflush 	0660   system	    system
+
 # add the read write right of ttyUSB*
 /dev/bus/usb/*     	  0660   root       usb
 /dev/ttyUSB0              0660   radio      radio
@@ -94,7 +101,6 @@
 
 #GPIO
 /dev/mtgpio               0600   radio      root
-
 
 #FOR VIA MODEM
 /dev/ttySDIO*             0660   radio      sdcard_rw
