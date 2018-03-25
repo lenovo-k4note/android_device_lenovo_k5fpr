@@ -106,6 +106,13 @@ ARCH_ARM_HAVE_VFP := true
 # System.prop
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /$(TARGET_COPY_OUT_VENDOR)/lib/libgralloc_extra.so|/$(TARGET_COPY_OUT_VENDOR)/lib/libmtkshim_gui \
+    /$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloc_extra.so|/$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkshim_gui \
+    /$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.mt6753.so|/$(TARGET_COPY_OUT_VENDOR)/lib/libmtkshim_audio.so \
+    /$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.mt6753.so|/$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkshim_audio.so
+
 # SELinux
 BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
 
