@@ -108,10 +108,10 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /$(TARGET_COPY_OUT_VENDOR)/lib/libgralloc_extra.so|/$(TARGET_COPY_OUT_VENDOR)/lib/libmtkshim_gui \
-    /$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloc_extra.so|/$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkshim_gui \
-    /$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.mt6753.so|/$(TARGET_COPY_OUT_VENDOR)/lib/libmtkshim_audio.so \
-    /$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.mt6753.so|/$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkshim_audio.so
+    /system/vendor/lib/libgralloc_extra.so|/system/vendor/lib/libmtkshim_gui.so \
+    /system/vendor/lib64/libgralloc_extra.so|/system/vendor/lib64/libmtkshim_gui.so \
+    /system/vendor/lib/hw/audio.primary.mt6753.so|/system/vendor/lib/libmtkshim_audio.so \
+    /system/vendor/lib64/hw/audio.primary.mt6753.so|/system/vendor/lib64/libmtkshim_audio.so
 
 # SELinux
 BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
@@ -119,6 +119,3 @@ BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
 # Block based ota
 # see http://review.cyanogenmod.org/#/c/78849/1/core/Makefile
 BLOCK_BASED_OTA := false
-
-# SensorHAL
-TARGET_SENSORS_DEVICE_API_VERSION := SENSORS_DEVICE_API_VERSION_1_1
