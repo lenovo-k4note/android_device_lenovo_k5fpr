@@ -28,7 +28,7 @@
 
 #define MT_RUSH_BOOST_PATH "/proc/hps/rush_boost_enabled"
 #define MT_FPS_UPPER_BOUND_PATH "/d/ged/hal/fps_upper_bound"
-#define MT_DYNAMIC_BOOST "/sys/devices/platform/dynamic_boost/dynamic_boost"
+//#define MT_DYNAMIC_BOOST "/sys/devices/platform/dynamic_boost/dynamic_boost"
 #define LENOVO_DT2W "/sys/lenovo_tp_gestures/tpd_suspend_status"
 
 #define POWER_HINT_POWER_SAVING 0x00000101
@@ -77,7 +77,7 @@ static void power_hint(struct power_module *module, power_hint_t hint,
             }
             break;
 	case POWER_HINT_LAUNCH:
-	    power_fwrite(MT_DYNAMIC_BOOST, "9 2000");
+	    //power_fwrite(MT_DYNAMIC_BOOST, "9 2000");
 	    break;
         case POWER_HINT_VSYNC:
         case POWER_HINT_INTERACTION:
