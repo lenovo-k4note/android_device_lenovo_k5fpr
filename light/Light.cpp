@@ -103,7 +103,6 @@ static std::map<Type, std::function<void(const LightState&)>> lights = {
     {Type::BACKLIGHT, handleBacklight},
     {Type::BATTERY, handleBattery},
     {Type::NOTIFICATIONS, handleNotification},
-    {Type::ATTENTION, handleNotification},
 };
 
 Light::Light() {}
