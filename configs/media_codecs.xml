@@ -75,8 +75,10 @@ Only the three quirks included above are recognized at this point:
 -->
 
 <MediaCodecs>
+    <Settings>
+        <Setting name="max-video-encoder-input-buffers" value="10" />
+    </Settings>
     <Decoders>
-        <!-- Mtk codecs -->
         <MediaCodec name="OMX.MTK.VIDEO.DECODER.HEVC" type="video/hevc" >
             <Limit name="size" min="16x16" max="1920x1088" />
             <Quirk name="requires-allocate-on-input-ports" />
@@ -178,7 +180,6 @@ Only the three quirks included above are recognized at this point:
             <Feature name="can-swap-width-height" />
         </MediaCodec>
     </Encoders>
-    <Include href="media_codecs_ffmpeg.xml" />
     <Include href="media_codecs_google_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
     <Include href="media_codecs_google_video_le.xml" />
