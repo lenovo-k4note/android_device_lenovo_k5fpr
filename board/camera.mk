@@ -1,2 +1,1 @@
 USE_MTK_CAMERA_WRAPPER := true
-TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_mtk
