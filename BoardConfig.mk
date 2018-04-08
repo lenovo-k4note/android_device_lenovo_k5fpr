@@ -107,11 +107,7 @@ ARCH_ARM_HAVE_VFP := true
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # Shims
-TARGET_LD_SHIM_LIBS := \
-    /system/vendor/lib/libgralloc_extra.so|/system/vendor/lib/libmtkshim_gui.so \
-    /system/vendor/lib64/libgralloc_extra.so|/system/vendor/lib64/libmtkshim_gui.so \
-    /system/vendor/lib/hw/audio.primary.mt6753.so|/system/vendor/lib/libmtkshim_audio.so \
-    /system/vendor/lib64/hw/audio.primary.mt6753.so|/system/vendor/lib64/libmtkshim_audio.so
+TARGET_LD_SHIM_LIBS := /system/lib/libgui.so|/system/vendor/lib/libmtkshim_gui.so:/system/lib64/libgui.so|/system/vendor/lib64/libmtkshim_gui.so:/system/vendor/lib/hw/audio.primary.mt6753.so|/system/vendor/lib/libmtkshim_audio.so:/system/vendor/lib64/hw/audio.primary.mt6753.so|/system/vendor/lib64/libmtkshim_audio.so:/system/vendor/lib/libcam.camadapter.so|/system/vendor/lib/libmtkshim_camera.so:/system/vendor/lib64/libcam.camadapter.so|/system/vendor/lib64/libmtkshim_camera.so
 
 # SELinux
 BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
