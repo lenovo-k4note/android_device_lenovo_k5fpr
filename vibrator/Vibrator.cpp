@@ -75,7 +75,7 @@ Return<Status> Vibrator::setAmplitude(uint8_t amplitude) {
     // MAX_VOLTAGE, and there are equal steps for every value in between.
     long voltage =
             std::lround((amplitude - 1) / 254.0 * (MAX_VOLTAGE - MIN_VOLTAGE) + MIN_VOLTAGE);
-    ALOGE("Setting amplitude  to: %ld", voltage);
+    ALOGD("Setting amplitude  to: %ld", voltage);
     mAmplitude << voltage << std::endl;
     if (!mAmplitude) {
         ALOGE("Failed to set amplitude (%d): %s", errno, strerror(errno));
