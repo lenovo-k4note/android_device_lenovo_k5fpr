@@ -110,8 +110,6 @@ void close_uart(void);
 int mtk_fw_cfg(void);
 int mtk_sco_cfg(void);
 int mtk_prepare_off(void);
-int mtk_set_fw_assert(uint8_t reason);
-int mtk_set_psm_control(bool enable);
 void clean_resource(void);
 
 #endif

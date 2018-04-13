@@ -56,17 +56,18 @@ int mtk_bt_op(bt_vendor_opcode_t opcode, void *param)
     {
       case BT_VND_OP_POWER_CTRL:
         LOG_DBG("BT_VND_OP_POWER_CTRL %d\n", *((int*)param));
-        /* DO NOTHING on combo chip */
+        //USELESS
         break;
 
       case BT_VND_OP_USERIAL_OPEN:
         LOG_DBG("BT_VND_OP_USERIAL_OPEN\n");
-
+        //USELESS
         ((int*)param)[0] = init_uart();
         ret = 1; // CMD/EVT/ACL-In/ACL-Out via the same fd
         break;
 
       case BT_VND_OP_USERIAL_CLOSE:
+        //USELESS
         LOG_DBG("BT_VND_OP_USERIAL_CLOSE\n");
         close_uart();
         break;
@@ -82,19 +83,23 @@ int mtk_bt_op(bt_vendor_opcode_t opcode, void *param)
         break;
 
       case BT_VND_OP_GET_LPM_IDLE_TIMEOUT:
+        //USELESS
         LOG_DBG("BT_VND_OP_GET_LPM_IDLE_TIMEOUT\n");
         *((uint32_t*)param) = 5000; //ms
         break;
 
       case BT_VND_OP_LPM_SET_MODE:
+        //USELESS
         LOG_DBG("BT_VND_OP_LPM_SET_MODE %d\n", *((uint8_t*)param));
         break;
 
       case BT_VND_OP_LPM_WAKE_SET_STATE:
+        //USELESS
         LOG_DBG("BT_VND_OP_LPM_WAKE_SET_STATE\n");
         break;
 
       case BT_VND_OP_EPILOG:
+        //USELESS
         LOG_DBG("BT_VND_OP_EPILOG\n");
         ret = mtk_prepare_off();
         break;
