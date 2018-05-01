@@ -169,10 +169,13 @@ bool VendorInterface::Open(InitializeCompleteCallback initialize_complete_cb,
     retry++;
   }
 
-  if (fd_list[0] < 0) {
+  // The hal will crash either way so do it earlier.
+  LOG_ALWAYS_FATAL_IF(fd_list[0] < 0, "Failed to open /dev/stpbt");
+
+  /*if (fd_list[0] < 0) {
    ALOGE("Can't open /dev/stpbt\n");
    return -1;
-  }
+  }*/
 
   if (fd_count < 1 || fd_count > CH_MAX - 1) {
     ALOGE("%s: fd_count %d is invalid!", __func__, fd_count);
