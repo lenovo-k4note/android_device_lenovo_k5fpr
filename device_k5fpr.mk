@@ -17,6 +17,7 @@ LOCAL_PATH := device/lenovo/k5fpr
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi 420dpi hdpi tvdpi mdpi ldpi
 
 # Product common configurations
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
