@@ -260,7 +260,6 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
     libcamera_parameters_mtk \
     libcam.client \
     libmmsdkservice.feature \
