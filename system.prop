@@ -49,7 +49,7 @@ qemu.hw.mainkeys=1
 debug.hwui.render_dirty_regions=false
 
 # LCD Density
-ro.sf.lcd_density=480
+ro.sf.lcd_density=420
 
 # Currently sdcardsfs in kernel is broken
 ro.sys.sdcardfs=false
