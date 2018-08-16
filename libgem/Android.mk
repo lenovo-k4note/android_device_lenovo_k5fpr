@@ -50,7 +50,7 @@ LOCAL_SRC_FILES := \
 	lib/SWWatchDog.cpp
 
 LOCAL_C_INCLUDES := \
-	device/lenovo/A7010a48/libgem/inc \
+	device/lenovo/k5fpr/libgem/inc \
 	frameworks/native/libs/nativewindow/include \
 	frameworks/native/libs/nativebase/include \
 	frameworks/native/libs/arect/include \
@@ -99,7 +99,7 @@ LOCAL_SRC_FILES := \
 	lib/GuiExtImpl.cpp
 
 LOCAL_C_INCLUDES := \
-	device/lenovo/A7010a48/libgem/inc
+	device/lenovo/k5fpr/libgem/inc
 
 LOCAL_SHARED_LIBRARIES := \
 	libutils \

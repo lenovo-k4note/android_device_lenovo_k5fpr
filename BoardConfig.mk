@@ -15,7 +15,7 @@
 #
 
 # Device path
-LOCAL_PATH := device/lenovo/A7010a48
+LOCAL_PATH := device/lenovo/k5fpr
 
 # Dont build seperate vendor img
 TARGET_COPY_OUT_VENDOR := system/vendor
@@ -24,7 +24,7 @@ TARGET_COPY_OUT_VENDOR := system/vendor
 include $(LOCAL_PATH)/board/*.mk
 
 # Device vendor board
--include vendor/lenovo/A7010a48/BoardConfigVendor.mk
+-include vendor/lenovo/k5fpr/BoardConfigVendor.mk
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
@@ -37,7 +37,7 @@ BOARD_MKBOOTIMG_ARGS := --base 0x40078000 --pagesize 2048 --kernel_offset 0x0000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_USES_64_BIT_BINDER := true
 TARGET_IS_64_BIT := true
-TARGET_KERNEL_SOURCE := kernel/lenovo/A7010a48
+TARGET_KERNEL_SOURCE := kernel/lenovo/k5fpr
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := k5fpr_defconfig
@@ -46,7 +46,7 @@ MTK_APPENDED_DTB_SUPPORT := yes
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 firmware_class.path=/system/vendor/firmware androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40078000
-BOARD_NAME := A7010a48
+BOARD_NAME := A7010
 
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true

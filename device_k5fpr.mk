@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-LOCAL_PATH := device/lenovo/A7010a48
+LOCAL_PATH := device/lenovo/k5fpr
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -326,4 +326,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
 
 # Vendor
-$(call inherit-product, vendor/lenovo/A7010a48/A7010a48-vendor.mk)
+$(call inherit-product, vendor/lenovo/k5fpr/k5fpr-vendor.mk)

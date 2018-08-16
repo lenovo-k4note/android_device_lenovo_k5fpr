@@ -8,8 +8,8 @@ LOCAL_SRC_FILES := \
 #	ge.c
 
 LOCAL_C_INCLUDES := \
-	device/lenovo/A7010a48/libgralloc_extra/include \
-	device/lenovo/A7010a48/libgralloc_extra/../include
+	device/lenovo/k5fpr/libgralloc_extra/include \
+	device/lenovo/k5fpr/libgralloc_extra/../include
 
 LOCAL_SHARED_LIBRARIES := \
     libhardware \
@@ -20,7 +20,7 @@ LOCAL_SHARED_LIBRARIES := \
 	libged
 
 LOCAL_EXPORT_C_INCLUDE_DIRS := \
-	device/lenovo/A7010a48/libgralloc_extra/include \
+	device/lenovo/k5fpr/libgralloc_extra/include \
 
 LOCAL_C_INCLUDES += \
 	system/core/libion/include \

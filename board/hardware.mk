@@ -5,7 +5,7 @@ BOARD_GLOBAL_CFLAGS += -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
 BOARD_GLOBAL_CFLAGS += -DMTK_HARDWARE
 
 # LineageOS
-BOARD_HARDWARE_CLASS := device/lenovo/A7010a48/lineagehw/
+BOARD_HARDWARE_CLASS := device/lenovo/k5fpr/lineagehw/
 
 # Graphics
 OVERRIDE_RS_DRIVER := libRSDriver_mtk.so
