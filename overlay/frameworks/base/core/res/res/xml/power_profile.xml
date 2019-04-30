@@ -21,8 +21,6 @@
     <item name="none">0</item>
     <item name="screen.on">202</item> <!-- From lenovo sources -->
     <item name="screen.full">281</item> <!-- From lenovo sources -->
-    <item name="bluetooth.active">126</item>  <!-- From lenovo sources -->
-    <item name="bluetooth.on">3.7</item>  <!-- From lenovo sources -->
     <item name="wifi.on">5</item>
     <item name="wifi.active">125</item>
     <item name="wifi.scan">30</item>
@@ -59,6 +57,10 @@
 	        <value>250</value>
     </array>
     <item name="battery.capacity">3300</item>
+    <item name="wifi.controller.voltage">3500</item>
+    <item name="wifi.controller.idle">3</item>
+    <item name="wifi.controller.rx">72.7</item>
+    <item name="wifi.controller.tx">304.8</item>
     <array name="wifi.batchedscan"> <!-- mA -->
       <value>.2</value> <!-- 1-8/hr -->
       <value>2</value>  <!-- 9-64/hr -->
