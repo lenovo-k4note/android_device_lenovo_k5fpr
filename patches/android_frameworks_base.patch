@@ -1,15 +1,14 @@
-From 0c18eb90df9e0478077d5c72b9ff37971a4a47e9 Mon Sep 17 00:00:00 2001
-From: DidntRead <gabro2003@gmail.com>
-Date: Fri, 22 Dec 2017 19:31:17 +0200
-Subject: [PATCH] whitelist mediatek path
+From bab5b49f161bee52df83599396df07bd536611b3 Mon Sep 17 00:00:00 2001
+From: Rokib Hasan Sagar <rokibhasansagar2014@outlook.com>
+Date: Fri, 8 Feb 2019 08:22:53 +0600
+Subject: * Update fd_utils.cpp (#1)
 
-Change-Id: I87c5054a8e3c024606045e98dcd62d7f9a562efb
 ---
  core/jni/fd_utils.cpp | 1 +
  1 file changed, 1 insertion(+)
 
 diff --git a/core/jni/fd_utils.cpp b/core/jni/fd_utils.cpp
-index 92a542676bc..d15e4864ffd 100644
+index 92a542676bcde541f04f0c3f5860c62bd333e84b..d15e4864ffd61f4012d10dd87bb377c53148767f 100644
 --- a/core/jni/fd_utils.cpp
 +++ b/core/jni/fd_utils.cpp
 @@ -43,6 +43,7 @@ static const char* kPathWhitelist[] = {
@@ -21,5 +20,5 @@ index 92a542676bc..d15e4864ffd 100644
  
  static const char kFdPath[] = "/proc/self/fd";
 -- 
-2.14.1
+2.20.1
 

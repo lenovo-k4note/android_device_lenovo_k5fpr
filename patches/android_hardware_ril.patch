@@ -1,0 +1,29 @@
+From 6ada7c3874770c46b887a62dbe0401a020c63e86 Mon Sep 17 00:00:00 2001
+From: Rokib Hasan Sagar <rokibhasansagar2014@outlook.com>
+Date: Fri, 8 Feb 2019 07:35:50 +0600
+Subject: * Update Android.mk
+
+---
+ rild/Android.mk | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/rild/Android.mk b/rild/Android.mk
+index 7ac505ca246520b9b9acace3b1364858d7436b9b..a171445f0fe287c19eb71291234d4d7ab2e49797 100644
+--- a/rild/Android.mk
++++ b/rild/Android.mk
+@@ -1,5 +1,7 @@
+ # Copyright 2006 The Android Open Source Project
+ 
++ifneq ($(BOARD_PROVIDES_RILD),true)
++
+ LOCAL_PATH:= $(call my-dir)
+ include $(CLEAR_VARS)
+ 
+@@ -31,3 +33,4 @@ LOCAL_INIT_RC := rild.rc
+ 
+ include $(BUILD_EXECUTABLE)
+ 
++endif # BOARD_PROVIDES_RILD
+-- 
+2.20.1
+
