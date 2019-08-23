@@ -86,7 +86,7 @@ ro.mtk_clearmotion_support=0
 keyguard.no_require_sim=true
 camera.disable_zsl_mode=1
 persist.debug.wfd.enable=1
-persist.sys.enable_rescue=0
+persist.sys.disable_rescue=1
 
 # FRP
 ro.frp.pst=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/frp
